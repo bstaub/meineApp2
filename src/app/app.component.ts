@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+
+  myClickHandlerTriggersEmmiter(){
+    window.alert('kommt aus app.component.js und wurde durch Emit ausgelöst!');
+  }
+
 }

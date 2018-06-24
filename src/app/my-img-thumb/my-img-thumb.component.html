@@ -1,0 +1,20 @@
+<p>Variante ohne Thumbnail</p>
+<ul>
+  <li *ngFor="let name of names" class="item">
+    {{name}}
+  </li>
+</ul>
+
+<p>Variante mit Thumbnail wenn vorhanden</p>
+
+<ul>
+  <ul>
+    <li *ngFor="let name of names" class="item">
+      {{name}}
+
+      <img class="myThumb" *ngIf="setThumbnail" [src]="thumbnail">
+    </li>
+
+  </ul>
+</ul>
+

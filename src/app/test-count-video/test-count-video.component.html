@@ -1,0 +1,8 @@
+<h2>test-count-video</h2>
+<input (keyup)="lengthCounter($event)">
+<p #para >Hello Angular: {{ length }}</p>
+<br>
+<a #Link [href]="url">Zum Video</a>
+<br>
+<a href="{{Link.href}}">Link2</a>
+<p>{{para.innerHTML}}</p>

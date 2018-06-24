@@ -1,0 +1,10 @@
+<!--
+<p [class]="'green'">{{name | uppercase}}</p>
+-->
+
+<!--
+  <p [class.green]="isGreenActive">{{name | lowercase}}</p>
+-->
+
+
+<p [ngClass]="{disabled: isDisabled, green: isGreenActive}">{{name | lowercase}}</p>

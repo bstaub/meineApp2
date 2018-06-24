@@ -1,0 +1,16 @@
+<p>Variante ngIf1</p>
+<ol>
+  <li *ngFor="let x of videos; even as e;">
+    <span *ngIf="e; else other">{{x}}</span>
+    <ng-template #other>NOT EVEN</ng-template>
+  </li>
+</ol>
+
+<p>Variante ngIf2</p>
+<ol>
+  <li *ngFor="let x of videos; even as e;">
+    <span *ngIf="e; then content else other">DAS HIER WIRD NICHT AUSGEGEBEN!</span>
+    <ng-template #content>{{x}}</ng-template>
+    <ng-template #other>NOT EVEN</ng-template>
+  </li>
+</ol>

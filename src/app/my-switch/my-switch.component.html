@@ -1,0 +1,9 @@
+<h2>my-switch</h2>
+<ol (click)="myClickHandler()">
+  <li [ngSwitch]="length">
+    <span *ngSwitchCase="1">Länge ist kurz</span>
+    <span *ngSwitchCase="3">Länge ist mittel</span>
+    <span *ngSwitchCase="5">Länge ist lang</span>
+    <span *ngSwitchDefault>Länge ist komisch Default</span>
+  </li>
+</ol>
