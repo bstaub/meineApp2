@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { VideoComponent } from './video/video.component';
@@ -22,6 +23,18 @@ import {VideoDBService} from './shared/video-db.service';
 import { Video2InjectComponent } from './video2-inject/video2-inject.component';
 import { ProductComponent } from './product/product.component';
 import {ProductsService} from './shared/products.service';
+import { WebsiteComponent } from './website/website.component';
+import { Seite404Component } from './seite404/seite404.component';
+
+const meineRouten: Routes = [
+    {path: 'product', component: ProductComponent },
+    {path: 'video/:id', component: VideoComponent },
+    {path: 'website', component: WebsiteComponent },
+    // {path: '', component: WebsiteComponent, pathMatch: 'full' }
+    {path: '', component: WebsiteComponent },
+    {path: '**', redirectTo: '/video/42' }
+
+];
 
 @NgModule({
   declarations: [
@@ -44,8 +57,11 @@ import {ProductsService} from './shared/products.service';
     MyIdLinkCloneComponent,
     Video2InjectComponent,
     ProductComponent,
+    WebsiteComponent,
+    Seite404Component,
   ],
   imports: [
+    RouterModule.forRoot(meineRouten),
     BrowserModule
   ],
   // providers: [VideoDBService, ProductService],

@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  myVideoID = 42;
+  myActivClass = 'activ';
 
 
   myClickHandlerTriggersEmmiter(){

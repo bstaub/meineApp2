@@ -9,60 +9,21 @@
 
 <ul>
   <li>
-    <app-my-click-counter></app-my-click-counter>
-  </li>
-  <li>
-    <app-my-form-keyup-event></app-my-form-keyup-event>
-  </li>
-  <li>
-    <app-my-id-link-clone></app-my-id-link-clone>
-  <li>
-    <app-my-click></app-my-click>
-  </li>
-  <li>
-    <app-my-list></app-my-list>
-  </li>
-  <li>
-    <app-my-switch></app-my-switch>
-  </li>
-  <li>
-    <app-my-if></app-my-if>
-  </li>
-  <li>
-    <app-my-pipes></app-my-pipes>
-  </li>
-  <li>
-    <app-my-img-thumb></app-my-img-thumb>
-  </li>
-  <li>
-    <app-my-class-binding></app-my-class-binding>
-  </li>
-  <li>
-    <app-my-style-binding></app-my-style-binding>
-  </li>
-  <li>
-    <app-my-own-properties [eigenschaft]="'foo'"></app-my-own-properties>
-  </li>
-  <li>
-    <app-my-input-properties [mitpunkt.eigenschaft2]="'hallo eigenschaft2'"></app-my-input-properties>
-  </li>
-  <li>
-    <app-my-event-emitter (click)="myClickHandlerTriggersEmmiter()"></app-my-event-emitter>
-  </li>
-  <li>
-    <app-my-event-emitter (meinEmitter)="myClickHandlerTriggersEmmiter()"></app-my-event-emitter>
-  </li>
-  <li>
-    <app-video></app-video>
-  </li>
-  <li>
-    <app-video2-inject></app-video2-inject>
-  </li>
-  <li>
-    <app-product></app-product>
+    <router-outlet></router-outlet>
   </li>
 
-
+  <li>
+    <h2><a [routerLink]="['/video', myVideoID]" routerLinkActive="activ active">Video RouterLink</a></h2>
+  </li>
+  <li>
+    <h2><a routerLink="/product" [routerLinkActive]="[myActivClass, 'active']">Produkt RouterLink</a></h2>
+  </li>
+  <li>
+    <h2><a href="/product">Produkt A-Link</a></h2>
+  </li>
+  <li>
+    <h2><a routerLink="/">Home</a></h2>
+  </li>
 
   <!--
         <li>
