@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { VideoComponent } from './video/video.component';
@@ -62,7 +64,8 @@ const meineRouten: Routes = [
   ],
   imports: [
     RouterModule.forRoot(meineRouten),
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   // providers: [VideoDBService, ProductService],
   providers: [VideoDBService, {provide: 'VideoComponentConfig', useValue: 'Injected String meineKonfigVonModules!'}, ProductsService],
