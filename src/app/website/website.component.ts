@@ -11,11 +11,12 @@ export class WebsiteComponent implements OnInit {
   constructor(private client: HttpClient) { }
 
   ngOnInit() {
-    this.client.get('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=BRC,USD,EUR', {observe: 'response'})
-      .subscribe(data => {
+    this.client.get('https://xmin-api.cryptocompare.com/data/price?fsym=ETH&tsyms=BRC,USD,EUR')
+
+        .subscribe(data => {
         console.log(data);
-        console.log(data['ok']);
-        console.log(data['body']);
+      }, err => {
+        console.log('etwas lief schief');
       });
   }
 
